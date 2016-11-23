@@ -1,0 +1,11 @@
+source 'https://rubygems.org'
+
+gem 'require_all'
+gem 'cucumber'
+gem 'rspec'
+gem 'rake'
+gem 'page-object'
+gem 'factory_girl'
+gem 'activerecord'
+gem 'pg'
+gem 'database_cleaner'
