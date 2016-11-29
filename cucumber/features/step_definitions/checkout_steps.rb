@@ -5,5 +5,6 @@ Given(/^the following cart:$/) do |cart_info|
 end
 
 When(/^the customer checks out$/) do
+  puts Dir.pwd
   visit(CheckoutPage).checkout
 end
