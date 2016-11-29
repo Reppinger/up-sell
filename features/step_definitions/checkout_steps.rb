@@ -3,3 +3,7 @@ Given(/^the following cart:$/) do |cart_info|
     create(:info)
   end
 end
+
+When(/^the customer checks out$/) do
+  visit(CheckoutPage).checkout
+end
