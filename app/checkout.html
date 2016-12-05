@@ -5,17 +5,20 @@
     <title>Shopping Cart</title>
     <script src="js/react-15.0.2.js"></script>
     <script src="js/react-dom-15.0.2.js"></script>
+    <script src="checkout_button.js"></script>
 </head>
 <body>
-You have opened the shopping cart. Click checkout to process your order.
-<div id="content"></div>
-<script type="text/javascript">
-    var checkout_button = React.createElement('button', {id: 'checkout'}, 'Checkout')
-    ReactDOM.render(
-            checkout_button,
-            document.getElementById('content')
-    )
-</script>
+    You have opened the shopping cart. Click checkout to process your order.
+    <div id="content"></div>
+    <script type="text/javascript">
+        let checkout_button = React.createElement(
+            CheckoutButton,
+            {id: 'checkout'},
+            'Checkout');
+        ReactDOM.render(checkout_button,
+                        document.getElementById('content')
+        );
+    </script>
 
 </body>
 </html>
