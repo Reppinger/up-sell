@@ -9,5 +9,3 @@ Feature: Accessory is offered at checkout
       |0.49        |residential  |PermaLawn |
     When the customer checks out
     Then a starter maintenance kit is offered
-    
-  
