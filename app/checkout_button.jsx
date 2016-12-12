@@ -5,5 +5,5 @@
 // }
 
 const CheckoutButton = (props) => {
-        return <button id="checkout" style={{fontSize: '20pt'}}>Checkout</button>
+        return <button id="checkout" style={{fontSize: props.fontSize}}>Checkout</button>
 };
