@@ -1,8 +1,12 @@
 class CheckoutButton extends React.Component {
+    constructor(props) {
+        super(props)
+        this.handleSave = this.handleSave.bind(this)
+    }
+
     componentWillMount() {
         console.log(ReactDOM.findDOMNode(this))
     }
-
 
     componentDidMount() {
         console.dir(ReactDOM.findDOMNode(this))
@@ -14,7 +18,7 @@ class CheckoutButton extends React.Component {
 
     render() {
         return <button
-            onClick={this.handleSave.bind(this)}
+            onClick={this.handleSave}
             id={this.props.id}
             style={{fontSize: this.props.fontSize}}>Checkout</button>
     }
