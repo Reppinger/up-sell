@@ -1,14 +1,20 @@
 class CheckoutButton extends React.Component {
+    constructor(props){
+        super(props)
+        this.state = {counter: 0}
+    }
+
     componentWillMount() {
         console.log(ReactDOM.findDOMNode(this))
     }
-    
+
     componentDidMount() {
         console.dir(ReactDOM.findDOMNode(this))
     }
 
     handleSave(event) {
-        console.log(this, event)
+        this.setState({counter: ++this.state.counter})
+        console.log(`Clicked ${this.state.counter} times.`)
     }
 
     render() {
