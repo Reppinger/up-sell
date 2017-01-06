@@ -1,4 +1,4 @@
 ReactDOM.render(
-  <CheckoutButton id="checkout" fontSize="10pt"/>,
+    <Content/>,
   document.getElementById('content')
 );
