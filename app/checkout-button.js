@@ -15,9 +15,7 @@ class CheckoutButton extends React.Component {
                 onClick: this.props.handleClick,
                 id: this.props.id,
                 style: { fontSize: this.props.fontSize } },
-            "Checkout clicked ",
-            this.props.counter,
-            " times."
+            "Checkout"
         );
     }
 }

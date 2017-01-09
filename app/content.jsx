@@ -11,8 +11,9 @@ class Content extends React.Component {
             <CheckoutButton id="checkout"
                                  fontSize="20pt"
                                  counter={this.state.counter}
-                                 handleClick={this.handleCheckoutClick.bind(this)}/>
+                                 handleClick={this.handleCheckoutClick.bind(this)} />
+            <br/>
+            <Counter value ={this.state.counter} />
         </div>
-
     }
 }

@@ -13,7 +13,9 @@ class Content extends React.Component {
             React.createElement(CheckoutButton, { id: "checkout",
                 fontSize: "20pt",
                 counter: this.state.counter,
-                handleClick: this.handleCheckoutClick.bind(this) })
+                handleClick: this.handleCheckoutClick.bind(this) }),
+            React.createElement("br", null),
+            React.createElement(Counter, { value: this.state.counter })
         );
     }
 }
