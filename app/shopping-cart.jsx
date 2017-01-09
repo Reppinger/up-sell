@@ -7,7 +7,12 @@ var Content = React.createClass({
     },
     render() {
         return <div>
-            Option buttons will go here?
+            <CheckoutButton id="checkout"
+                            fontSize="20pt"
+                            counter={this.state.counter}
+                            handleClick={this.handleCheckoutClick} />
+            <br/>
+            <Counter value ={this.state.counter} />
         </div>
     }
 });
