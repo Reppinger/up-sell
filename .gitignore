@@ -1,4 +1,6 @@
 .idea/
 checkout.js
 checkout_button.js
+content.js
+counter.js
 node_modules
