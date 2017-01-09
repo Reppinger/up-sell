@@ -5,7 +5,7 @@ Feature: Accessory is offered at checkout
 
   Scenario: Residential PermaLawn orders under 1/2 acre are offered starter maintenance kit
     Given the following cart:
-      |Lawn acreage|Property type|Product   |
-      |0.49        |residential  |PermaLawn |
+      | Lawn acreage | Property type | Product               |
+      | 0.49         | residential   | PermaLawn Starter Kit |
     When the customer checks out
     Then a starter maintenance kit is offered

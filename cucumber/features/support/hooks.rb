@@ -1,7 +1,7 @@
 require 'watir'
 
 Before do
-  @browser = Watir::Browser.new :firefox
+  @browser = Watir::Browser.new
 end
 
 After do
