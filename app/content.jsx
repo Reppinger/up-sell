@@ -3,7 +3,7 @@ class Content extends React.Component {
         super(props)
         this.state = {counter: 0}
     }
-    handleClick(event) {
+    handleCheckoutClick(event) {
         this.setState({counter: ++this.state.counter})
     }
     render() {
@@ -11,7 +11,7 @@ class Content extends React.Component {
             <CheckoutButton id="checkout"
                                  fontSize="20pt"
                                  counter={this.state.counter}
-                                 handleClick={this.handleClick.bind(this)}/>
+                                 handleClick={this.handleCheckoutClick.bind(this)}/>
         </div>
 
     }
