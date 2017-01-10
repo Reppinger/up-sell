@@ -8,14 +8,14 @@ When(/^the customer checks out$/) do
   visit(ShoppingCartPage).checkout
 end
 
-Then(/^a starter maintenance kit is offered$/) do
+Then(/^"([^"]*)" is offered$/) do |expected_offering|
   on(CheckoutPage) do |page|
-    expect(page.text).to include 'Starter Maintenance Kit'
+    expect(on(CheckoutPage)).to have_radio_button expected_offering
   end
 end
 
-And(/^a deluxe maintenance kit is not offered$/) do
+Then(/^"([^"]*)" is not offered$/) do |offering_not_expected|
   on(CheckoutPage) do |page|
-    expect(page.text).to_not include 'Deluxe Maintenance Kit'
+    expect(page).to_not have_radio_button offering_not_expected
   end
 end

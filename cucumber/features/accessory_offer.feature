@@ -8,5 +8,5 @@ Feature: Accessory is offered at checkout
       | Lawn acreage | Property type | Product               |
       | 0.49         | residential   | PermaLawn Starter Kit |
     When the customer checks out
-    Then a starter maintenance kit is offered
-    And a deluxe maintenance kit is not offered
+    Then "Starter Maintenance Kit" is offered
+    And "Deluxe Maintenance Kit" is not offered
