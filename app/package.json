@@ -4,7 +4,8 @@
   "description": "Created to use babel-cli to transpile JSX",
   "main": "",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib"
   },
   "author": "",
   "license": "ISC",

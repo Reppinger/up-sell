@@ -3,7 +3,8 @@ var Content = React.createClass({
         return {counter: 0}
     },
     handleCheckoutClick(event) {
-        this.setState({counter: ++this.state.counter})
+        //This feels so evil. Need routing.
+        window.location.href = 'checkout.html'
     },
     render() {
         return <div>
@@ -12,7 +13,6 @@ var Content = React.createClass({
                             counter={this.state.counter}
                             handleClick={this.handleCheckoutClick} />
             <br/>
-            <Counter value ={this.state.counter} />
         </div>
     }
 });

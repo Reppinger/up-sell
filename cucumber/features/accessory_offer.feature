@@ -4,8 +4,9 @@ Feature: Accessory is offered at checkout
   So that I can sell more products with the initial purchase
 
   Scenario: Residential PermaLawn orders under 1/2 acre are offered starter maintenance kit
-    Given the following cart:
+    Given the following shopping cart:
       | Lawn acreage | Property type | Product               |
       | 0.49         | residential   | PermaLawn Starter Kit |
     When the customer checks out
     Then a starter maintenance kit is offered
+    And a deluxe maintenance kit is not offered

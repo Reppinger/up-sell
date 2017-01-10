@@ -5,5 +5,4 @@ class ShoppingCartPage
 
   button(:checkout, id: 'checkout')
 
-
 end
