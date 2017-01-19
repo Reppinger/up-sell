@@ -1,25 +1,19 @@
 class SliderValue extends React.Component {
     constructor(props) {
         super(props)
-        this.handleSlide = this.handleSlide.bind(this)
-        this.state = {sliderValue: 0}
-    }
-
-    handleSlide(event) {
-        this.setState({sliderValue: event.detail.ui.value})
     }
 
     componentDidMount(){
-        window.addEventListener('slide', this.handleSlide)
+        window.addEventListener('slide', this.props.handleSlide)
     }
 
     componentWillUnmount(){
-        window.removeEventListener('slide', this.handleSlide)
+        window.removeEventListener('slide', this.props.handleSlide)
     }
 
     render() {
         return <div>
-            Value: {this.state.sliderValue}
+            Value: {this.props.sliderValue}
         </div>
     }
 }
