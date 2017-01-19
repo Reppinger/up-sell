@@ -6,7 +6,7 @@ class SliderButtons extends React.Component {
     }
 
     handleSlide(event, ui) {
-            this.setState({sliderValue: ui.value})
+        this.setState({sliderValue: ui.value})
     }
 
     handleChange(value) {

@@ -9,6 +9,7 @@ var Content = React.createClass({
     render() {
         return <div>
             <SliderButtons />
+            <SliderValue />
             <CheckoutButton id="checkout"
                             fontSize="20pt"
                             counter={this.state.counter}

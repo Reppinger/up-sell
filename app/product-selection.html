@@ -3,27 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <title>Shopping Cart</title>
-    <script src="js/react-15.0.2.js"></script>
-    <script src="js/react-dom-15.0.2.js"></script>
-    <link rel="stylesheet" href="css/jquery-ui.structure.css">
-    <link rel="stylesheet" href="css/jquery-ui.theme.css">
+    <!--Webpack coming soon..-->
+    <script src="node_modules/react/dist/react.js"></script>
+    <script src="node_modules/react-dom/dist/react-dom.js"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="js/jquery-ui.js"></script>
-    <script>
-        $(function() {
-            $('#slider').slider();
-        })
-    </script>
+
     <link rel="stylesheet" href="css/jquery-ui.structure.css">
     <link rel="stylesheet" href="css/jquery-ui.theme.css">
+
+    <script src="lib/slider-buttons.js"></script>
+    <script src="lib/slider-value.js"></script>
+    <script src="lib/checkout-button.js"></script>
+    <script>
+        $(function() {
+            let handleChange = (e, ui) => {
+                let slideEvent = new CustomEvent('slide',
+                    {
+                        detail: {ui: ui, jQueryEvent: e}
+                    });
+                window.dispatchEvent(slideEvent)
+            };
+            $('#slider').slider({
+                'change' : handleChange,
+                'slide' : handleChange
+            });
+        })
+    </script>
 </head>
 
 <body>
     <div id="slider"></div>
     <div id="content"></div>
-
-    <script src="lib/slider-buttons.js"></script>
-    <script src="lib/checkout-button.js"></script>
     <script src="lib/product-selection.js"></script>
+
 </body>
 </html>
