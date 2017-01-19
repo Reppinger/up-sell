@@ -1,11 +1,11 @@
-Given(/^the following shopping cart:$/) do |cart_info|
-  cart_info.symbolic_hashes.each do |info|
-    create(:info)
+When(/^the customer checks out with:$/) do |lawn_criteria|
+  order = lawn_criteria.symbolic_hashes
+  visit(ProductSelectionPage) do |page|
+    page.acreage = order[:acreage]
+    page.property_type = order[:property_type]
+    page.product = order[:product]
+    page.checkout
   end
-end
-
-When(/^the customer checks out$/) do
-  visit(ShoppingCartPage).checkout
 end
 
 Then(/^"([^"]*)" is offered$/) do |expected_offering|

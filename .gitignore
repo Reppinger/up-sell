@@ -1,3 +1,4 @@
+.DS_Store
 .idea/
 app/lib
 node_modules

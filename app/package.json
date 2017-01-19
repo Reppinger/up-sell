@@ -10,10 +10,13 @@
   "author": "",
   "license": "ISC",
   "babel": {
-    "presets": ["react"]
+    "presets": [
+      "react"
+    ]
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
-    "babel-preset-react": "^6.16.0"
+    "babel-preset-react": "^6.16.0",
+    "jquery-ui": "^1.12.1"
   }
 }
