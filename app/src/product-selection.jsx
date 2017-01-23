@@ -9,11 +9,17 @@ var Content = React.createClass({
     handleSlide(event) {
         this.setState({sliderValue: event.detail.ui.value})
     },
+    componentDidMount(){
+        window.addEventListener('slide', this.handleSlide)
+    },
+
+    componentWillUnmount(){
+        window.removeEventListener('slide', this.handleSlide)
+    },
+
     render() {
         return <div>
-            {/*<SliderButtons />*/}
-            <SliderValue sliderValue={this.state.sliderValue}
-                          handleSlide = {this.handleSlide}/>
+            <SliderButtons sliderValue={this.state.sliderValue} />
             <CheckoutButton id="checkout"
                             fontSize="20pt"
                             handleClick={this.handleCheckoutClick} />
