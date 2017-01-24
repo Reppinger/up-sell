@@ -1,18 +1,20 @@
 class SliderButtons extends React.Component {
     calculateNewSliderValue(delta) {
-        return this.props.sliderValue + delta;
+        return (this.props.sliderValue + delta);
     }
 
-    //Now, how do I calculate the variable ONCE within the JSX for each button?
     render() {
+        let newSliderValue = 0;
         return <div>
             <button disabled={(this.props.sliderValue <1 ? true : false)}
-                    onClick={this.props.updateSlider(this.calculateNewSliderValue(-1))}>
-                Decrease to {this.calculateNewSliderValue(-1)}
+                    {...newSliderValue = this.calculateNewSliderValue(-1)}
+                    onClick={this.props.updateSlider(newSliderValue)}>
+                Decrease to {newSliderValue}
             </button>
             <button disabled={(this.props.sliderValue >=100 ? true : false)}
-                    onClick={this.props.updateSlider(this.calculateNewSliderValue(1))}>
-                Increase to {this.calculateNewSliderValue(1)}
+                    {...newSliderValue = this.calculateNewSliderValue(1)}
+                    onClick={this.props.updateSlider(newSliderValue)}>
+                Increase to {newSliderValue}
             </button>
         </div>
     }
