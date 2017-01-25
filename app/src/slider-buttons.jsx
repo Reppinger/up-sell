@@ -3,10 +3,10 @@ class SliderButtons extends React.Component {
         return (this.props.sliderValue + delta);
     }
     isMax() {
-        return this.props.sliderValue >= 100;
+        return this.props.sliderValue >= this.props.sliderMax;
     }
     isMin() {
-        return this.props.sliderValue < 1;
+        return this.props.sliderValue < this.props.sliderMin;
     }
     render() {
         let newSliderValue = 0;

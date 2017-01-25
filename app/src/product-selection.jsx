@@ -24,7 +24,9 @@ var Content = React.createClass({
 
     render() {
         return <div>
-            <SliderButtons sliderValue={this.state.sliderValue}
+            <SliderButtons  sliderMax="100"
+                            sliderMin = "1"
+                            sliderValue={this.state.sliderValue}
                             updateSlider={this.updateSliderValue}/>
             <CheckoutButton id="checkout"
                             fontSize="20pt"
